@@ -27,7 +27,8 @@ $.fn.createMaps = function(google, address, parcel_id) {
 $.fn.getPropertyReport = function(strX, strY) {
 	$.getJSON("http://hcpd.pluto.dev/cagis/jsonp.php?callback=?",{action: 'getPropertyReport', x: strX, y: strY}, function(res){
 		$.mobile.loading( 'hide');
-		$('#property div.content').html(res.locationReportResult.LocationQueryData.Jurisdiction);
+		$('#property h2').text(res.locationReportResult.LocationQueryData.Jurisdiction);
+		$('#property-results').html(res.locationReportResult.LocationQueryData.Jurisdiction);
 		$.mobile.changePage( "#property", { transition: "slide"} );
 	});
 };
@@ -51,7 +52,8 @@ $.fn.geoCodeLocator = function(strLocation) {
 				$.fn.getPropertyReport(strX, strY);
 			}else{
 				$.mobile.loading( 'hide');
-				$('#results div.content').html(result_count);
+				$('#results h2').text(result_count + ' Properties Found');
+				$('#results-list').html(result_count);
 				$.mobile.changePage( "#results", { transition: "slide"} );
 			}
 		}else{

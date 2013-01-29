@@ -114,6 +114,7 @@ h1 {
     -webkit-animation:fade 3000ms infinite;*/
 }
 
+
 input.location-fld{}
-#search-msg{float:right;}
-#search-msg.error{color:red;}
+#search-msg{height:12px;padding:0.5em;text-align:center;border-bottom:1px dotted #ccc}
+#search-msg.error{color:red;font-weight:bold;animation:fade 3000ms infinite;-webkit-animation:fade 3000ms infinite;}

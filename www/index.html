@@ -16,12 +16,8 @@
 	</div>
 	
 	<div id="categories" data-role="page" data-title="Categories">
-		<div data-role="panel" id="mypanel">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue tincidunt justo vel pharetra. Curabitur blandit, turpis et tristique venenatis, justo ipsum molestie mauris, eu tincidunt augue leo vitae odio. Nullam ultrices, ipsum ac volutpat porttitor, nisl dolor porttitor nisl, vitae accumsan nibh lorem et massa. Pellentesque hendrerit odio non erat bibendum nec sagittis ante tincidunt. Fusce ac volutpat nibh. Duis quam sem, scelerisque vel fermentum ac, vehicula vel nibh. Vivamus ligula neque, dapibus ut sagittis nec, tempor sit amet quam. Integer eu augue ac enim laoreet fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
-		</div><!-- /panel -->
 	
 		<div data-role="header">
-			<a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext">Panel</a>
 			<h1>HCPD</h1>
 		</div><!-- /header -->
 	
@@ -30,38 +26,55 @@
 			<label for="basic">Search Properties:</label>
 			<input type="text" name="fld-location" id="fld-location" value=""   />
 			<a id="search-btn" href="#results" data-role="button" data-icon="search" data-iconpos="left"  data-inline="true">Search</a>
-			<div id="search-msg"></div>
-			<ul data-role="listview" data-inset="true">
-			<li><a href="#category?animals" class="animals">Animals</a></li>
-			<li><a href="#category?colors" class="colors">Colors</a></li>
-			<li><a href="#category?vehicles" class="vehicles">Vehicles</a></li>
-			</ul>
-			
+			<div id="search-msg"></div>		
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue tincidunt justo vel pharetra. Curabitur blandit, turpis et tristique venenatis, justo ipsum molestie mauris, eu tincidunt augue leo vitae odio. Nullam ultrices, ipsum ac volutpat porttitor, nisl dolor porttitor nisl, vitae accumsan nibh lorem et massa.</p>
 		</div><!-- /content -->
+		
 	</div><!-- /page -->
 	
 	<div id="results" data-role="page" data-title="Results">
 	
 	      <div data-role="header">
 	      	<a href="#" data-role="button" data-icon="back" data-iconpos="notext">Back</a>
-		    <h1>Search Results</h1>
+		    <h1>Results</h1>
 	      </div><!-- /header -->
 	  
 	      <div class="content" data-role="content">
-	        
+	        <h2>0 Properties Found</h2>
+	        <div id="results-list"></div>
 	      </div><!-- /content -->
+	      
 	</div><!-- /page -->
 	
 	<div id="property" data-role="page" data-title="Property">
 	
-	      <div data-role="header">
-	      	<a href="#" data-role="button" data-icon="back" data-iconpos="notext">Back</a>
-		    <h1>Property Details</h1>
-	      </div><!-- /header -->
-	  
-	      <div class="content" data-role="content">
-	        
-	      </div><!-- /content -->
+		<div data-role="panel" id="mypanel" data-position="right">
+		<ul data-role="listview">
+			<li><a href="#">Maps</a></li>
+			<li><a href="#">Data</a></li>
+			<li><a href="#">Forms</a></li>
+		</ul>
+		</div><!-- /panel -->
+		  
+		  <div data-role="header">
+		  	<a href="#" data-role="button" data-icon="back" data-iconpos="notext">Back</a>
+		    <h1>Details</h1>
+		    <a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext">Panel</a>
+		  </div><!-- /header -->
+		  
+		  <div class="content" data-role="content">
+		  		<h2>Property Name Here</h2>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" class="ui-btn-active ui-state-persist">Maps</a></li>
+						<li><a href="#">Parcel</a></li>
+						<li><a href="#">Zoning</a></li>
+						<li><a href="#">Forms</a></li>
+					</ul>
+				</div><!-- /navbar -->
+				<div id="property-results"></div>
+		  </div><!-- /content -->
+	      
 	</div><!-- /page -->
 	
 	<div id="animals" data-role="page" data-title="Animals">
