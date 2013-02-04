@@ -118,3 +118,21 @@ h1 {
 input.location-fld{}
 #search-msg{height:12px;padding:0.5em;text-align:center;border-bottom:1px dotted #ccc}
 #search-msg.error{color:red;font-weight:bold;animation:fade 3000ms infinite;-webkit-animation:fade 3000ms infinite;}
+
+@media ( min-width: 40em ) {
+	/* Show the table header rows and set all cells to display: table-cell */ 
+	.data-table td,
+	.data-table th,
+	.data-table tbody th,
+	.data-table tbody td,
+	.data-table thead td,
+	.data-table thead th {
+		display: table-cell;
+		margin: 0;
+	}
+	/* Hide the labels in each cell */ 
+	.data-table td .ui-table-cell-label,
+	.data-table th .ui-table-cell-label { 
+		display: none;
+	}
+}
